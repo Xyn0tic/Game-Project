@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="RichTextLabel" type="RichTextLabel"]
+margin_left = 1.0
+margin_top = 13.0
+margin_right = 321.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 0, 10 )
+bbcode_enabled = true
+bbcode_text = "[center]Button[/center]"
+text = "Button"
