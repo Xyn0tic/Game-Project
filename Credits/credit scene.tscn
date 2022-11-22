@@ -1,0 +1,97 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://upheavtt.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://04B_30__.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://Credits/credit scene.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 23
+extra_spacing_char = 5
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 0.117647, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 0.117647, 0, 1 )
+
+[sub_resource type="Theme" id=6]
+Button/styles/hover = SubResource( 3 )
+Button/styles/normal = SubResource( 4 )
+Button/styles/pressed = SubResource( 5 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 12
+extra_spacing_bottom = -14
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="GROUP 5" type="RichTextLabel" parent="."]
+margin_left = 92.0
+margin_top = 6.0
+margin_right = 229.0
+margin_bottom = 30.0
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]GROUP [color=red]5[/color][/center]"
+text = "GROUP 5"
+
+[node name="MEMBERS" type="RichTextLabel" parent="."]
+margin_left = 53.0
+margin_top = 29.0
+margin_right = 260.0
+margin_bottom = 161.0
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]Members:
+Abrigo, Ryan
+Borsigue, John
+Cruz, Eliah
+Estonina, Vin
+Real, Ron
+Villaraiz, Aaliyah[/center]"
+text = "Members:
+Abrigo, Ryan
+Borsigue, John
+Cruz, Eliah
+Estonina, Vin
+Real, Ron
+Villaraiz, Aaliyah"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 132.0
+margin_top = 156.0
+margin_right = 187.0
+margin_bottom = 176.0
+theme = SubResource( 6 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 131.0
+margin_top = 157.0
+margin_right = 187.0
+margin_bottom = 180.0
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 7 )
+bbcode_enabled = true
+bbcode_text = "[wave amp=50 freq=2][center]BACK[/center][/wave]"
+text = "BACK"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -14,6 +14,10 @@ config/name="GAME++"
 run/main_scene="res://GAME++.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Musicplayer="*res://musicplayer.tscn"
+
 [display]
 
 window/size/width=320
